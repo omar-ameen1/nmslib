@@ -122,8 +122,6 @@ class BuildExt(build_ext):
         if flag in os.environ["CFLAGS"]:
           no_arch_flag=False
           break
-    if no_arch_flag:
-        c_opts['unix'].append('-march=native')
     link_opts = {
         'unix': [],
         'msvc': [],
